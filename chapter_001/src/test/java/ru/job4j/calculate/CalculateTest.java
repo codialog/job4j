@@ -1,6 +1,7 @@
 package ru.job4j.calculate;
 
 import org.junit.Test;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -8,8 +9,8 @@ import static org.junit.Assert.assertThat;
  * Test.
  *
  * @author Druzhinin Vladimir (mailto:dialog.txt@gmail.com)
- * @since 24.08.2018
  * @version $Id$
+ * @since 24.08.2018
  * @since 0.1
  */
 
