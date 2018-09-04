@@ -32,4 +32,24 @@ public class ConverterTest {
         int result = converter.rubleToEuro(70);
         assertThat(result, is(1));
     }
+
+    @Test
+    /**
+     * Test конвертации евро в рубли.
+     */
+    public void when1EuroToRubleThen70() {
+        Converter converter = new Converter();
+        int result = converter.euroToRuble(1);
+        assertThat(result, is(70));
+    }
+
+    @Test
+    /**
+     * Test конвертации доллоров в рубли.
+     */
+    public void when1DolladToRubleThen60() {
+        Converter converter = new Converter();
+        int result = converter.dollarToRuble(1);
+        assertThat(result, is(60));
+    }
 }
