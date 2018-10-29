@@ -47,7 +47,7 @@ public class GoogleSheetsIntegrationTest {
 
 		ValueRange appendBody = new ValueRange()
 				.setValues(Arrays.asList(
-						Arrays.asList("Total", "=E1+E4")));
+						Arrays.asList("1", "1","1","1","1","1","1","1","1")));
 		AppendValuesResponse appendResult = sheetsService.spreadsheets().values()
 				.append(SPREADSHEET_ID, "A9", appendBody)
 				.setValueInputOption("USER_ENTERED")
