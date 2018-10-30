@@ -26,6 +26,10 @@ import com.google.api.services.sheets.v4.model.ValueRange;
 
 import static org.assertj.core.api.Assertions.*;
 
+/*
+* https://developers.google.com/sheets/api/guides/authorizing#APIKey
+* https://www.baeldung.com/google-sheets-java-client
+*/
 public class GoogleSheetsIntegrationTest {
 
 	private static Sheets sheetsService;
@@ -42,12 +46,10 @@ public class GoogleSheetsIntegrationTest {
 	@Test
 	public void whenWriteSheet_thenReadSheetOk() throws IOException {
 
-		List appendList = new ArrayList();
-		appendList.add("1");
 
 		ValueRange appendBody = new ValueRange()
 				.setValues(Arrays.asList(
-						Arrays.asList("1", "1","1","1","1","1","1","1","1")));
+						Arrays.asList("2", "2","2","1","1","1","1","1","1")));
 		AppendValuesResponse appendResult = sheetsService.spreadsheets().values()
 				.append(SPREADSHEET_ID, "A9", appendBody)
 				.setValueInputOption("USER_ENTERED")
